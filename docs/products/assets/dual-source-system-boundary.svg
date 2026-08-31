@@ -1,48 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
-<title id="title">双源冷凝系统边界概念示意</title>
-<desc id="desc">制冷剂回路与空气侧、水侧蒸发冷却的概念关系图，非特定产品结构图。</desc>
-<defs>
-  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#315bc7"/></marker>
-  <marker id="greenArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#168a64"/></marker>
-  <style>
-    .title{font:700 25px Arial,'Noto Sans CJK SC',sans-serif;fill:#20242b}
-    .label{font:600 18px Arial,'Noto Sans CJK SC',sans-serif;fill:#20242b}
-    .small{font:15px Arial,'Noto Sans CJK SC',sans-serif;fill:#5c6675}
-    .box{fill:#f7f9fc;stroke:#b8c5dc;stroke-width:2;rx:14}
-    .blue{fill:none;stroke:#315bc7;stroke-width:4;marker-end:url(#arrow)}
-    .green{fill:none;stroke:#168a64;stroke-width:3;marker-end:url(#greenArrow)}
-  </style>
-</defs>
-<rect width="1200" height="560" fill="#fff"/>
-<text x="60" y="52" class="title">双源冷凝的系统边界与能量路径</text>
-<text x="60" y="82" class="small">基于公开原理的原创概念示意，不代表任何特定企业产品结构或尺寸。</text>
-
-<rect x="80" y="170" width="205" height="100" class="box"/>
-<text x="182" y="212" text-anchor="middle" class="label">压缩机</text>
-<text x="182" y="240" text-anchor="middle" class="small">输入电功 Pcomp</text>
-
-<rect x="430" y="125" width="250" height="145" class="box"/>
-<text x="555" y="170" text-anchor="middle" class="label">室内侧换热器</text>
-<text x="555" y="200" text-anchor="middle" class="small">蒸发吸热 / 制热放热</text>
-<text x="555" y="228" text-anchor="middle" class="small">负荷侧冷量 Qcool</text>
-
-<rect x="830" y="170" width="270" height="100" class="box"/>
-<text x="965" y="212" text-anchor="middle" class="label">双源冷凝排热侧</text>
-<text x="965" y="240" text-anchor="middle" class="small">冷凝放热 Qrej</text>
-
-<path d="M285 215 H430" class="blue"/>
-<path d="M680 190 H830" class="blue"/>
-<path d="M830 250 H285 Q230 250 230 270 Q230 330 180 330 Q130 330 130 270 V270" class="blue"/>
-
-<rect x="790" y="350" width="175" height="85" fill="#eef5ff" stroke="#7a9be5" stroke-width="2" rx="12"/>
-<text x="877" y="386" text-anchor="middle" class="label">空气侧</text>
-<text x="877" y="412" text-anchor="middle" class="small">显热交换 / 风机功率</text>
-
-<rect x="995" y="350" width="175" height="85" fill="#eefaf4" stroke="#72b89c" stroke-width="2" rx="12"/>
-<text x="1082" y="386" text-anchor="middle" class="label">水蒸发侧</text>
-<text x="1082" y="412" text-anchor="middle" class="small">潜热交换 / 水泵功率</text>
-
-<path d="M920 270 V350" class="green"/>
-<path d="M1010 270 V350" class="green"/>
-<text x="60" y="500" class="small">评价边界：Psystem = Pcomp + Pfan + Ppump + Paux；应同时核对冷量、辅助功耗、补水、排污与维护代价。</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 560" role="img" aria-label="Dual source heat pump system boundary">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#17324d"/></marker>
+    <style>
+      .core{fill:#f7f9fb;stroke:#17324d;stroke-width:3}.source-a{fill:#dce9f5;stroke:#2f65b0;stroke-width:3}.source-b{fill:#e8f1ec;stroke:#2e8b68;stroke-width:3}.load{fill:#f8e7d4;stroke:#c7782b;stroke-width:3}.line{fill:none;stroke:#17324d;stroke-width:3;marker-end:url(#arrow)}.label{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:25px;fill:#17324d;text-anchor:middle}.minor{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:21px;fill:#566274;text-anchor:middle}
+    </style>
+  </defs>
+  <rect width="1060" height="560" fill="#fff"/>
+  <rect x="380" y="185" width="300" height="170" rx="16" class="core"/>
+  <rect x="70" y="75" width="230" height="95" rx="12" class="source-a"/>
+  <rect x="760" y="75" width="230" height="95" rx="12" class="source-b"/>
+  <rect x="415" y="430" width="230" height="82" rx="12" class="load"/>
+  <path d="M300 125 H380 V220" class="line"/><path d="M760 125 H680 V220" class="line"/><path d="M530 355 V430" class="line"/>
+  <text x="185" y="116" class="label">空气侧</text><text x="185" y="148" class="label">Air Source</text>
+  <text x="875" y="116" class="label">蒸发冷侧</text><text x="875" y="148" class="label">Evaporative Source</text>
+  <text x="530" y="245" class="label">双源冷凝</text><text x="530" y="278" class="label">Dual-source Condenser</text>
+  <text x="530" y="315" class="minor">制冷剂回路</text>
+  <text x="530" y="466" class="label">末端负荷</text><text x="530" y="497" class="label">Load</text>
 </svg>

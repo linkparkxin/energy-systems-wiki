@@ -3,7 +3,7 @@
 > **暖通空调与能源系统工程知识库**  
 > 以暖通空调为专业基础，以系统工程为方法，以能源优化为长期方向。
 
-HVAC & Energy Systems Wiki 是一个面向暖通、制冷、能源与系统工程学习者的开放工程知识体系。项目从暖通空调、制冷热泵和建筑环境出发，逐步连接设备、机组、控制、仿真、节能实践与技术前沿。
+HVAC & Energy Systems Wiki 是一个面向暖通、制冷、能源与系统工程学习者的开放工程知识体系。项目从暖通空调、制冷热泵和建筑环境出发，逐步连接设备、机组、控制、仿真、节能实践、技术前沿以及工程组织管理。
 
 ## 项目定位
 
@@ -20,13 +20,14 @@ HVAC & Energy Systems Wiki 是一个面向暖通、制冷、能源与系统工�
 ## 知识主线
 
 - **01 基础科学 Fundamentals**：工程热力学、传热学、流体力学、湿空气、质量与能量守恒、数值基础；
-- **02 制冷与热泵 Refrigeration & Heat Pumps**：蒸汽压缩式制冷循环、制冷剂、蒸发、冷凝、节流、热泵和性能评价；
+- **02 制冷与热泵 Refrigeration & Heat Pumps**：蒸汽压缩式制冷循环、制冷剂、蒸发、冷凝、节流、热泵、性能评价与工程答疑；
 - **03 设备与部件 Components & Equipment**：压缩机、换热器、膨胀阀、风机、水泵、阀件、管路、传感器和执行机构；
 - **04 机组与系统 Units & Systems**：冷水机组、热泵、空气处理、恒温恒湿、冷冻水、冷却水、热回收和模块化系统；
 - **05 控制与智能 Control & Intelligence**：PID、PLC、BMS、设备联动、群控、IoT、CPS、边缘计算、数字孪生和AI优化；
 - **06 仿真与设计 Simulation & Design**：CAD、SolidWorks、CFD、Fluent、OpenFOAM、EnergyPlus、OpenStudio、Rhino、Grasshopper和Python；
 - **07 工程案例 Engineering Practice**：建筑、酒店、工业、恒温恒湿、节能改造、系统调试和故障诊断；
-- **08 技术前沿 Frontier & Insights**：高效热泵、低GWP制冷剂、智能控制、数字孪生、AI for HVAC和综合能源系统。
+- **08 技术前沿 Frontier & Insights**：高效热泵、低GWP制冷剂、智能控制、数字孪生、AI for HVAC和综合能源系统；
+- **管理专栏 Management**：人事管理与供应链管理的公开方法和工程协同框架。
 
 每个主题尽量回答四类问题：是什么、为什么、怎么做、还能如何优化。
 

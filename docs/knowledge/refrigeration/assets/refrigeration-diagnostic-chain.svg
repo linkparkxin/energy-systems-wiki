@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 420" role="img" aria-label="Refrigeration diagnostic chain">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#17324d"/></marker>
+    <style>
+      .box{fill:#f7f9fb;stroke:#17324d;stroke-width:2.5}.blue{fill:#dce9f5;stroke:#2f65b0;stroke-width:2.5}.orange{fill:#f8e7d4;stroke:#c7782b;stroke-width:2.5}.green{fill:#e8f1ec;stroke:#2e8b68;stroke-width:2.5}.line{fill:none;stroke:#17324d;stroke-width:3;marker-end:url(#arrow)}.label{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:23px;fill:#17324d;text-anchor:middle}
+    </style>
+  </defs>
+  <rect width="1080" height="420" fill="#fff"/>
+  <rect x="45" y="160" width="175" height="90" rx="12" class="blue"/><rect x="260" y="160" width="175" height="90" rx="12" class="box"/><rect x="475" y="160" width="175" height="90" rx="12" class="orange"/><rect x="690" y="160" width="175" height="90" rx="12" class="green"/><rect x="905" y="160" width="130" height="90" rx="12" class="box"/>
+  <path d="M220 205 H250" class="line"/><path d="M435 205 H465" class="line"/><path d="M650 205 H680" class="line"/><path d="M865 205 H895" class="line"/>
+  <text x="132" y="195" class="label">蒸发与冷凝</text><text x="132" y="227" class="label">Te · Tc</text>
+  <text x="347" y="195" class="label">压力与温度</text><text x="347" y="227" class="label">p · T</text>
+  <text x="562" y="195" class="label">过热与过冷</text><text x="562" y="227" class="label">SH · SC</text>
+  <text x="777" y="195" class="label">能效与能力</text><text x="777" y="227" class="label">Q̇ · W · COP</text>
+  <text x="970" y="195" class="label">联合诊断</text><text x="970" y="227" class="label">Decision</text>
+</svg>

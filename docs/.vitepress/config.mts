@@ -27,6 +27,13 @@ export default defineConfig({
       { text: '仿真与设计', link: '/simulation/' },
       { text: '工程案例', link: '/cases/' },
       { text: '技术前沿', link: '/frontier/' },
+      {
+        text: '管理专栏',
+        items: [
+          { text: '人事管理', link: '/people/' },
+          { text: '供应链管理', link: '/supply-chain/' }
+        ]
+      },
       { text: '关于', link: '/about/publication-policy' }
     ],
 
@@ -53,7 +60,8 @@ export default defineConfig({
                 { text: '09 变工况与参数耦合', link: '/knowledge/refrigeration/09-off-design-coupling' },
                 { text: '10 基础运行诊断', link: '/knowledge/refrigeration/10-basic-diagnostics' },
                 { text: '11 热泵循环', link: '/knowledge/refrigeration/11-heat-pump-cycle' },
-                { text: '12 本章总结与学习检查', link: '/knowledge/refrigeration/12-summary-check' }
+                { text: '12 本章总结与学习检查', link: '/knowledge/refrigeration/12-summary-check' },
+                { text: '13 工程答疑区', link: '/knowledge/refrigeration/13-field-faq' }
               ]
             },
             { text: '03 设备与部件', link: '/components/' },
@@ -105,6 +113,18 @@ export default defineConfig({
         {
           text: '技术前沿',
           items: [{ text: '前沿与思考', link: '/frontier/' }]
+        }
+      ],
+      '/people/': [
+        {
+          text: '人事管理',
+          items: [{ text: '专栏总览', link: '/people/' }]
+        }
+      ],
+      '/supply-chain/': [
+        {
+          text: '供应链管理',
+          items: [{ text: '专栏总览', link: '/supply-chain/' }]
         }
       ],
       '/about/': [

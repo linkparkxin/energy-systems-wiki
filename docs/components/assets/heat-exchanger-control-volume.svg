@@ -1,40 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
-<title id="title">换热器控制体能量与压降示意</title>
-<desc id="desc">热流体和冷流体经过换热器控制体时的温度、流量和热量交换概念图。</desc>
-<defs>
-  <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#315bc7"/></marker>
-  <style>
-    .title{font:700 25px Arial,'Noto Sans CJK SC',sans-serif;fill:#20242b}
-    .label{font:600 18px Arial,'Noto Sans CJK SC',sans-serif;fill:#20242b}
-    .small{font:15px Arial,'Noto Sans CJK SC',sans-serif;fill:#5c6675}
-    .line{fill:none;stroke:#315bc7;stroke-width:4;marker-end:url(#arr)}
-  </style>
-</defs>
-<rect width="1100" height="520" fill="#fff"/>
-<text x="55" y="50" class="title">换热器控制体：热量、流量与压降</text>
-<text x="55" y="80" class="small">原创通用示意图；实际流向可能为并流、逆流或交叉流。</text>
-
-<rect x="365" y="145" width="370" height="220" fill="#f7f9fc" stroke="#9eacc4" stroke-width="3" rx="18"/>
-<text x="550" y="205" text-anchor="middle" class="label">换热器控制体</text>
-<text x="550" y="238" text-anchor="middle" class="small">传热面积 A · 总传热系数 U</text>
-<text x="550" y="270" text-anchor="middle" class="small">换热量 Q · 压降 Δp</text>
-<path d="M500 310 H600" stroke="#e09b32" stroke-width="5" marker-end="url(#arr)"/>
-<text x="550" y="340" text-anchor="middle" class="small">跨壁面传递热量</text>
-
-<path d="M80 205 H365" class="line"/>
-<path d="M735 305 H1015" class="line"/>
-<text x="80" y="180" class="label">热流体入口</text>
-<text x="80" y="235" class="small">ṁh, Tin,h, pin,h</text>
-<text x="830" y="280" class="label">热流体出口</text>
-<text x="830" y="330" class="small">Tout,h, pout,h</text>
-
-<path d="M1015 205 H735" class="line"/>
-<path d="M365 305 H80" class="line"/>
-<text x="830" y="180" class="label">冷流体入口</text>
-<text x="830" y="235" class="small">ṁc, Tin,c, pin,c</text>
-<text x="80" y="280" class="label">冷流体出口</text>
-<text x="80" y="330" class="small">Tout,c, pout,c</text>
-
-<text x="55" y="445" class="small">水侧：Q̇ = ṁ cp (Tout − Tin)；制冷剂相变侧：Q̇ = ṁr (hout − hin)。</text>
-<text x="55" y="475" class="small">性能评价还应记录风机/水泵功率、污垢热阻、结霜或布水不均等非理想因素。</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-label="Heat exchanger control volume">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#17324d"/></marker>
+    <style>
+      .shell{fill:#f7f9fb;stroke:#17324d;stroke-width:3}.tube{stroke:#2f65b0;stroke-width:10;fill:none}.hot{stroke:#c7782b;stroke-width:5;fill:none;marker-end:url(#arrow)}.cold{stroke:#2f65b0;stroke-width:5;fill:none;marker-end:url(#arrow)}.label{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:25px;fill:#17324d;text-anchor:middle}.minor{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:21px;fill:#566274;text-anchor:middle}
+    </style>
+  </defs>
+  <rect width="980" height="520" fill="#fff"/>
+  <rect x="230" y="110" width="520" height="300" rx="18" class="shell"/>
+  <path d="M285 180 H695" class="hot"/><path d="M695 245 H285" class="cold"/><path d="M285 310 H695" class="hot"/><path d="M695 375 H285" class="cold"/>
+  <path d="M90 180 H220" class="hot"/><path d="M760 245 H890" class="cold"/><path d="M90 310 H220" class="hot"/><path d="M760 375 H890" class="cold"/>
+  <text x="490" y="250" class="label">换热器</text><text x="490" y="286" class="label">Heat Exchanger</text>
+  <text x="145" y="145" class="minor">热流体入口</text><text x="835" y="220" class="minor">冷流体出口</text>
+  <text x="145" y="385" class="minor">热流体入口</text><text x="835" y="420" class="minor">冷流体出口</text>
+  <text x="490" y="455" class="minor">Q̇</text>
 </svg>
