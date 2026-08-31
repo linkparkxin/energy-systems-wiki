@@ -7,6 +7,9 @@ export default defineConfig({
   description: '面向暖通空调、制冷、热泵、能源与系统工程的开放工程知识库，覆盖基础理论、核心部件、机组系统、控制、仿真、工程案例与技术前沿。',
   base: '/energy-systems-wiki/',
   lastUpdated: true,
+  markdown: {
+    math: true
+  },
   head: [
     ['meta', { name: 'keywords', content: '暖通空调, HVAC, 制冷, 热泵, 建筑能源, 系统工程, 控制, CFD, EnergyPlus' }],
     ['meta', { property: 'og:title', content: 'HVAC & Energy Systems Wiki' }],
