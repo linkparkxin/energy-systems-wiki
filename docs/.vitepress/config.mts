@@ -122,6 +122,7 @@ export default defineConfig({
           items: [
             { text: '交流说明', link: '/community/' },
             { text: '答疑归档', link: '/community/qa-log' },
+            { text: '讨论区维护与部署', link: '/community/maintenance' },
             { text: '工程答疑区', link: '/knowledge/refrigeration/13-field-faq' }
           ]
         }

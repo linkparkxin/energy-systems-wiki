@@ -19,3 +19,29 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.community-discussion {
+  margin: 2rem 0 3rem;
+  padding: 1.25rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.community-discussion-placeholder,
+.community-discussion-error {
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+}
+
+.community-discussion-placeholder strong {
+  color: var(--vp-c-text-1);
+}
+
+.community-discussion-placeholder a {
+  color: var(--vp-c-brand-1);
+}
+
+.waline-container {
+  min-height: 160px;
+}
