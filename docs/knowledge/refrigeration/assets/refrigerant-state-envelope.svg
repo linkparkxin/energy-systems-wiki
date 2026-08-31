@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+<title id="title">制冷剂压力温度与相区概念示意</title>
+<desc id="desc">压力温度平面上的饱和曲线、液相区、两相区和气相区概念图。</desc>
+<style>
+  .title{font:700 25px Arial,'Noto Sans CJK SC',sans-serif;fill:#20242b}
+  .label{font:600 18px Arial,'Noto Sans CJK SC',sans-serif;fill:#20242b}
+  .small{font:15px Arial,'Noto Sans CJK SC',sans-serif;fill:#5c6675}
+  .axis{stroke:#394454;stroke-width:2}
+  .curve{fill:none;stroke:#315bc7;stroke-width:4}
+</style>
+<rect width="1000" height="520" fill="#fff"/>
+<text x="50" y="48" class="title">制冷剂热力状态：压力—温度关系的概念图</text>
+<text x="50" y="78" class="small">曲线形状仅用于说明相区关系，不代表某一种制冷剂的真实物性数据。</text>
+<line x1="125" y1="420" x2="870" y2="420" class="axis"/>
+<line x1="125" y1="420" x2="125" y2="105" class="axis"/>
+<path d="M185 395 C285 375 350 325 420 255 C490 185 600 130 745 125" class="curve"/>
+<path d="M420 255 L420 420 L125 420 Z" fill="#eefaf4"/>
+<path d="M420 255 L745 125 L745 420 Z" fill="#eef5ff"/>
+<path d="M185 395 C285 375 350 325 420 255 C490 185 600 130 745 125 L745 420 L420 420 Z" fill="#fff7e6" opacity="0.85"/>
+<text x="215" y="370" class="label">液相区</text>
+<text x="500" y="330" class="label">两相区</text>
+<text x="700" y="205" class="label">气相区</text>
+<text x="475" y="235" class="label" fill="#315bc7">饱和曲线</text>
+<text x="475" y="475" text-anchor="middle" class="small">温度 T</text>
+<text x="65" y="270" transform="rotate(-90 65 270)" text-anchor="middle" class="small">压力 P</text>
+<text x="760" y="145" class="small">临界点附近</text>
+<text x="50" y="505" class="small">工程判断应使用同一制冷剂的压力—温度物性关系，不能仅凭单独温度判断干度。</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+<title id="title">换热器建模与优化工作流</title>
+<desc id="desc">从公开边界与数据到一维模型、计算流体力学、系统评价和验证迭代的工程流程。</desc>
+<defs>
+  <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#315bc7"/></marker>
+  <style>
+    .title{font:700 25px Arial,'Noto Sans CJK SC',sans-serif;fill:#20242b}
+    .label{font:600 17px Arial,'Noto Sans CJK SC',sans-serif;fill:#20242b}
+    .small{font:14px Arial,'Noto Sans CJK SC',sans-serif;fill:#5c6675}
+    .box{fill:#f7f9fc;stroke:#b8c5dc;stroke-width:2;rx:14}
+    .line{stroke:#315bc7;stroke-width:3;fill:none;marker-end:url(#arr)}
+  </style>
+</defs>
+<rect width="1200" height="420" fill="#fff"/>
+<text x="55" y="48" class="title">换热器建模与优化：从部件模型到系统判断</text>
+<text x="55" y="77" class="small">原创方法示意图；模型结果必须区分假设、计算结果与实测数据。</text>
+
+<rect x="55" y="145" width="190" height="125" class="box"/>
+<text x="150" y="185" text-anchor="middle" class="label">公开边界</text>
+<text x="150" y="215" text-anchor="middle" class="small">几何、工质、工况</text>
+<text x="150" y="240" text-anchor="middle" class="small">材料与测量定义</text>
+
+<rect x="290" y="145" width="190" height="125" class="box"/>
+<text x="385" y="185" text-anchor="middle" class="label">一维模型</text>
+<text x="385" y="215" text-anchor="middle" class="small">Q、Δp、UA</text>
+<text x="385" y="240" text-anchor="middle" class="small">性能基线与敏感性</text>
+
+<rect x="525" y="145" width="190" height="125" class="box"/>
+<text x="620" y="185" text-anchor="middle" class="label">CFD</text>
+<text x="620" y="215" text-anchor="middle" class="small">Computational Fluid Dynamics</text>
+<text x="620" y="240" text-anchor="middle" class="small">局部流场与均匀性</text>
+
+<rect x="760" y="145" width="190" height="125" class="box"/>
+<text x="855" y="185" text-anchor="middle" class="label">系统评价</text>
+<text x="855" y="215" text-anchor="middle" class="small">冷量、功率、用水量</text>
+<text x="855" y="240" text-anchor="middle" class="small">全年与部分负荷</text>
+
+<rect x="995" y="145" width="150" height="125" class="box"/>
+<text x="1070" y="185" text-anchor="middle" class="label">验证迭代</text>
+<text x="1070" y="215" text-anchor="middle" class="small">守恒</text>
+<text x="1070" y="240" text-anchor="middle" class="small">趋势与实测</text>
+
+<path d="M245 207 H290" class="line"/>
+<path d="M480 207 H525" class="line"/>
+<path d="M715 207 H760" class="line"/>
+<path d="M950 207 H995" class="line"/>
+<path d="M1070 270 V335 H385 V270" class="line"/>
+<text x="735" y="350" text-anchor="middle" class="small">修正边界条件、网格、关联式或控制策略后重新计算</text>
+</svg>
