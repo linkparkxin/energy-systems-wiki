@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 阅读知识库
+    url: https://linkparkxin.github.io/energy-systems-wiki/
+    about: 先查看已有章节、公式和工程答疑，再提交重复问题
+  - name: 信息公开与发布规范
+    url: https://linkparkxin.github.io/energy-systems-wiki/about/publication-policy
+    about: 提交前请阅读公开边界、版权和敏感信息要求

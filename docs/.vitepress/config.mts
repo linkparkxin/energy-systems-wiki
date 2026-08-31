@@ -27,6 +27,7 @@ export default defineConfig({
       { text: '仿真与设计', link: '/simulation/' },
       { text: '工程案例', link: '/cases/' },
       { text: '技术前沿', link: '/frontier/' },
+      { text: '交流与问答', link: '/community/' },
       {
         text: '管理专栏',
         items: [
@@ -113,6 +114,16 @@ export default defineConfig({
         {
           text: '技术前沿',
           items: [{ text: '前沿与思考', link: '/frontier/' }]
+        }
+      ],
+      '/community/': [
+        {
+          text: '交流与问答',
+          items: [
+            { text: '交流说明', link: '/community/' },
+            { text: '答疑归档', link: '/community/qa-log' },
+            { text: '工程答疑区', link: '/knowledge/refrigeration/13-field-faq' }
+          ]
         }
       ],
       '/people/': [

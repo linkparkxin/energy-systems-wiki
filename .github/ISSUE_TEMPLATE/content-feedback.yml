@@ -1,0 +1,54 @@
+name: 内容建议或勘误
+description: 报告知识库中的公式、链接、图片、术语、事实或排版问题
+title: "[内容建议] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请指出具体页面和位置。涉及公式、参数或工程结论时，请尽量提供公开来源或可复现的核验依据。不要提交内部资料、客户信息或未公开技术数据。
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: 建议类型
+      options:
+        - 事实或概念需要核验
+        - 公式或变量表达问题
+        - 链接或路径失效
+        - 图片或图注问题
+        - 术语和中英文表达问题
+        - 排版和可读性问题
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: 涉及页面
+      description: 请填写页面标题或网站链接。
+      placeholder: 例如：制冷与热泵 / 蒸气压缩制冷循环
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 当前内容与问题
+      description: 请粘贴必要的短句或描述问题出现的位置。
+      placeholder: 当前页面中……
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 修改建议与依据
+      description: 请说明建议改成什么，以及依据的公开资料、计算过程或复现步骤。
+      placeholder: 建议修改为……；依据是……
+    validations:
+      required: true
+  - type: checkboxes
+    id: public
+    attributes:
+      label: 公开确认
+      options:
+        - label: 我确认提交内容不包含企业内部敏感信息，并同意建议记录公开保留。
+          required: true

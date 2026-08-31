@@ -1,0 +1,59 @@
+name: 技术问答
+description: 提交暖通空调、制冷、热泵、控制、仿真或能源系统方面的公开技术问题
+title: "[技术问答] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交问题。请只填写可以公开的信息，不要包含客户名称、项目地址、内部图纸、BOM、未公开设备参数、报价或账号信息。管理员会先核验问题边界，再进行公开答复。
+  - type: dropdown
+    id: category
+    attributes:
+      label: 问题所属方向
+      options:
+        - 基础科学
+        - 制冷与热泵
+        - 设备与部件
+        - 机组与系统
+        - 控制与智能
+        - 仿真与设计
+        - 工程案例
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: 问题标题
+      description: 请用一句话概括问题，例如“蒸发温度降低为什么会影响 COP？”
+      placeholder: 请填写清晰、具体的问题标题
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 问题描述
+      description: 请说明你想理解的现象、概念或计算过程。
+      placeholder: 请尽量描述完整的问题和你的初步判断
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景与已知条件
+      description: 如涉及计算或运行现象，请填写工况、测点、单位和已知数据。没有数据可填写“概念问题”。
+      placeholder: 例如：制冷模式，冷冻水供回水 7/12 °C，吸气压力对应饱和温度为 2 °C
+  - type: textarea
+    id: expected
+    attributes:
+      label: 希望获得的答复
+      description: 可填写希望看到的公式、变量解释、计算示例、诊断思路或推荐阅读方向。
+      placeholder: 我希望了解……
+  - type: checkboxes
+    id: public
+    attributes:
+      label: 公开确认
+      options:
+        - label: 我确认提交内容不包含企业内部敏感信息，并同意问题和答复以公开 Issue 形式保留。
+          required: true
