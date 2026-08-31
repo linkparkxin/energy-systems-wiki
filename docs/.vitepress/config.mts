@@ -34,7 +34,25 @@ export default defineConfig({
           items: [
             { text: '总览', link: '/knowledge/' },
             { text: '01 基础科学', link: '/knowledge/fundamentals' },
-            { text: '02 制冷与热泵', link: '/knowledge/refrigeration-cycle' },
+            {
+              text: '02 制冷与热泵',
+              collapsed: false,
+              items: [
+                { text: '章节导读', link: '/knowledge/refrigeration/00-guide' },
+                { text: '01 制冷的物理基础', link: '/knowledge/refrigeration/01-physical-foundation' },
+                { text: '02 制冷剂的热力状态', link: '/knowledge/refrigeration/02-refrigerant-state' },
+                { text: '03 蒸气压缩制冷循环', link: '/knowledge/refrigeration/03-vapor-compression-cycle' },
+                { text: '04 蒸发与冷凝温度', link: '/knowledge/refrigeration/04-evap-condensation-temperature' },
+                { text: '05 真实机组中的各种温度', link: '/knowledge/refrigeration/05-real-unit-temperatures' },
+                { text: '06 过热与过冷', link: '/knowledge/refrigeration/06-superheat-subcooling' },
+                { text: '07 p-h 图与 T-s 图', link: '/knowledge/refrigeration/07-ph-and-ts' },
+                { text: '08 制冷系统性能评价', link: '/knowledge/refrigeration/08-performance-evaluation' },
+                { text: '09 变工况与参数耦合', link: '/knowledge/refrigeration/09-off-design-coupling' },
+                { text: '10 基础运行诊断', link: '/knowledge/refrigeration/10-basic-diagnostics' },
+                { text: '11 热泵循环', link: '/knowledge/refrigeration/11-heat-pump-cycle' },
+                { text: '12 本章总结与学习检查', link: '/knowledge/refrigeration/12-summary-check' }
+              ]
+            },
             { text: '03 设备与部件', link: '/components/' },
             { text: '04 机组与系统', link: '/products/' },
             { text: '05 控制与智能', link: '/knowledge/control-intelligence' },
