@@ -52,4 +52,4 @@ Energy Systems Wiki 面向公开技术传播。内容应以**公开、可验证�
 
 **资料筛选 → 公开性判断 → 重写与脱敏 → 来源核验 → 技术审查 → Public-Safe Review → Git 提交 → 发布**
 
-提交前同时完成仓库根目录中的 [`SECURITY_REVIEW.md`](../../SECURITY_REVIEW.md) 检查。
+提交前同时参考仓库根目录中的 `SECURITY_REVIEW.md` 检查清单；该文件属于仓库审查材料，不随网站发布。
