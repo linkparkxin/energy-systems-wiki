@@ -2,15 +2,15 @@
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#17324d"/></marker>
     <style>
-      .shell{fill:#f7f9fb;stroke:#17324d;stroke-width:3}.tube{stroke:#2f65b0;stroke-width:10;fill:none}.hot{stroke:#c7782b;stroke-width:5;fill:none;marker-end:url(#arrow)}.cold{stroke:#2f65b0;stroke-width:5;fill:none;marker-end:url(#arrow)}.label{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:25px;fill:#17324d;text-anchor:middle}.minor{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:21px;fill:#566274;text-anchor:middle}
+      .shell{fill:#f7f9fb;stroke:#17324d;stroke-width:3}.hot{stroke:#c7782b;stroke-width:8;fill:none;marker-end:url(#arrow)}.cold{stroke:#2f65b0;stroke-width:8;fill:none;marker-end:url(#arrow)}.label{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:25px;fill:#17324d;text-anchor:middle}.minor{font-family:'Times New Roman','SimSun','宋体','Songti SC',serif;font-size:21px;fill:#566274;text-anchor:middle}
     </style>
   </defs>
   <rect width="980" height="520" fill="#fff"/>
-  <rect x="230" y="110" width="520" height="300" rx="18" class="shell"/>
-  <path d="M285 180 H695" class="hot"/><path d="M695 245 H285" class="cold"/><path d="M285 310 H695" class="hot"/><path d="M695 375 H285" class="cold"/>
-  <path d="M90 180 H220" class="hot"/><path d="M760 245 H890" class="cold"/><path d="M90 310 H220" class="hot"/><path d="M760 375 H890" class="cold"/>
-  <text x="490" y="250" class="label">换热器</text><text x="490" y="286" class="label">Heat Exchanger</text>
-  <text x="145" y="145" class="minor">热流体入口</text><text x="835" y="220" class="minor">冷流体出口</text>
-  <text x="145" y="385" class="minor">热流体入口</text><text x="835" y="420" class="minor">冷流体出口</text>
-  <text x="490" y="455" class="minor">Q̇</text>
+  <rect x="190" y="105" width="600" height="310" rx="20" class="shell"/>
+  <path d="M80 180 H880" class="hot"/>
+  <path d="M880 340 H80" class="cold"/>
+  <text x="135" y="145" class="minor">热流体入口</text><text x="845" y="145" class="minor">热流体出口</text>
+  <text x="845" y="385" class="minor">冷流体入口</text><text x="135" y="385" class="minor">冷流体出口</text>
+  <text x="490" y="245" class="label">换热器</text><text x="490" y="282" class="label">Heat Exchanger</text>
+  <text x="490" y="330" class="minor">Q̇</text>
 </svg>
