@@ -30,6 +30,8 @@ jobs:
         run: npm install
 
       - name: Build VitePress site
+        env:
+          VITE_WALINE_SERVER_URL: \${{ vars.VITE_WALINE_SERVER_URL || secrets.VITE_WALINE_SERVER_URL }}
         run: npm run docs:build
 
       - name: Setup Pages
@@ -45,7 +47,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: \${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     steps:
