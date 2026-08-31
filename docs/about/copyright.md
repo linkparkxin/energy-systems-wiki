@@ -1,6 +1,6 @@
 ---
 title: 版权与权属说明
-description: 说明Energy Systems Wiki的原创内容、第三方依赖和使用边界。
+description: 说明HVAC & Energy Systems Wiki的原创内容、第三方依赖和使用边界。
 ---
 
 # 版权与权属说明
@@ -9,7 +9,7 @@ description: 说明Energy Systems Wiki的原创内容、第三方依赖和使用
 
 除特别注明外，本项目中的原创文字、原创图示、原创表格、原创案例表达、网页主题配置和项目组织方式，由项目贡献者独立创作并保留相应权利。
 
-Copyright © 2026 Energy Systems Wiki. All Rights Reserved.
+Copyright © 2026 HVAC & Energy Systems Wiki. All Rights Reserved.
 
 未经权利人书面许可，不得对本站原创文章、图示、案例整理和页面内容进行整体复制、镜像发布、商业再利用或改编传播。
 
