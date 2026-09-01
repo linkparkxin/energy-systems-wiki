@@ -31,6 +31,10 @@ HVAC & Energy Systems Wiki 是一个面向暖通、制冷、能源与系统工�
 
 每个主题尽量回答四类问题：是什么、为什么、怎么做、还能如何优化。
 
+## 开放交流与问答
+
+网站保留文章页的 Waline 上下文评论，并在 `/community/` 提供基于 Supabase 的实时开放问答区。访客通过匿名用户参与，不需要 GitHub 账户、邮箱或手机号；问题和回复直接进入数据库并实时同步给已打开页面。管理员只负责事后隐藏、恢复、删除或保留内容，不承担预审和日常答疑。Supabase 建表、行级安全策略（Row Level Security，RLS）、Realtime 和配置方法见 `supabase/README.md` 与 `supabase/migrations/20260901_community_qa.sql`。
+
 ## 信息公开与知识产权原则
 
 本仓库是公开知识仓库，提交内容应默认可能被搜索引擎、同行和大语言模型长期读取与索引。

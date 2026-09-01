@@ -5,7 +5,7 @@ description: 开放式讨论区的服务端配置、管理员权限、数据备�
 
 # 讨论区维护与部署
 
-本项目的网页由 GitHub Pages 静态发布，静态文件本身不能安全保存留言，也不能把管理员密钥放在浏览器端。因此，开放式讨论区采用 Waline 客户端加独立服务端和数据库的结构。
+本项目的网页由 GitHub Pages 静态发布，静态文件本身不能安全保存留言，也不能把管理员密钥放在浏览器端。当前采用并行方案：文章页继续使用 Waline，`/community/` 开放问答区使用 Supabase 免费版、匿名用户和 Realtime。这样可以在不改变已有文章路径的情况下，先验证独立的实时问答流程。
 
 ## 建议的权限模型
 
@@ -20,7 +20,23 @@ description: 开放式讨论区的服务端配置、管理员权限、数据备�
 
 为了保留讨论过程，普通用户的补充内容建议以新回复保存。管理员删除内容时，优先采用逻辑删除或隐藏方式，并保留操作时间和原因；只有在法律、隐私或安全要求下才进行彻底删除。
 
-## 服务端配置
+## Supabase 配置
+
+当前开放问答区不需要额外部署 Waline 服务端。数据库初始化脚本位于仓库的 `supabase/migrations/20260901_community_qa.sql`，完整操作说明位于 `supabase/README.md`。
+
+管理员需要在 Supabase 中完成以下配置：
+
+1. 创建 Free 项目；
+2. 开启 Authentication → Providers → Anonymous Sign-Ins；
+3. 在 SQL Editor 执行数据库脚本；
+4. 在 GitHub Actions 的 Secrets 或 Variables 中设置 `VITE_SUPABASE_URL` 和 `VITE_SUPABASE_ANON_KEY`；
+5. 手动运行一次 Pages 工作流并打开 `/community/` 验证。
+
+公开的 Project URL 和 anon/publishable key 可以进入前端构建结果，数据库密码、`service_role key` 和其他管理密钥不得进入仓库或 `VITE_` 变量。
+
+数据库使用行级安全策略（Row Level Security，RLS）：匿名登录用户可以读取公开内容、创建问题和回复，但不能修改他人内容、修改状态或读取治理日志。Supabase 的 Realtime 订阅负责将新增、隐藏、恢复和删除事件推送到已打开的页面。
+
+## Waline 配置
 
 管理员需要先部署 Waline 服务端和数据库，再将服务端公开地址写入构建环境变量：
 
@@ -32,9 +48,19 @@ VITE_WALINE_SERVER_URL=https://your-waline-server.example.com
 
 服务端首次部署完成后，应立即完成管理员注册并修改默认凭据。Waline 官方文档提供了服务部署、数据库连接和管理后台说明：[Waline Get Started](https://waline.js.org/en/guide/get-started/)。
 
+Waline 当前只用于文章页的上下文评论，不负责 `/community/` 的实时问答。若暂未配置 Waline，文章页会显示配置提示，但不会影响 Supabase 问答区。
+
 ## 讨论区运行策略
 
-前端当前使用以下策略：
+Supabase 开放问答区当前使用以下策略：
+
+- 匿名登录，不要求 GitHub、邮箱或手机号；
+- 普通用户可以直接发布问题和追加回复；
+- 新增、隐藏、恢复和删除通过 Realtime 同步到已打开页面；
+- 管理员仅通过 Supabase Dashboard 进行事后治理；
+- 正式知识内容仍通过 Markdown 和 Git 版本化。
+
+文章页的 Waline 当前使用以下策略：
 
 - 关闭强制登录；
 - 只要求填写昵称；
@@ -44,7 +70,7 @@ VITE_WALINE_SERVER_URL=https://your-waline-server.example.com
 - 以当前网页路径区分不同文章的讨论串；
 - 服务端异常时显示友好提示，不影响正文阅读。
 
-服务端应进一步配置：
+Waline 服务端应进一步配置：
 
 - 普通参与者只能创建和回复；
 - 普通参与者不能删除他人内容；
@@ -59,8 +85,9 @@ VITE_WALINE_SERVER_URL=https://your-waline-server.example.com
 
 | 内容 | 保存位置 | 版本方式 |
 | --- | --- | --- |
-| 原始问题与回复 | Waline 数据库 | 创建时间、回复关系和数据库备份 |
-| 管理员隐藏记录 | Waline 管理日志或备份 | 操作时间和处理原因 |
+| 文章页原始评论 | Waline 数据库 | 创建时间、页面路径和数据库备份 |
+| 开放问答问题与回复 | Supabase PostgreSQL | 创建时间、回复关系和数据库导出 |
+| 管理员隐藏记录 | Supabase `community_moderation_log` | 触发器记录操作时间和操作者；原因可由管理员补充 |
 | 正式知识答案 | docs/ Markdown | Git commit |
 | 正式图片和示意图 | docs/ assets | Git commit |
 | 重大知识修订 | Git commit 与更新记录 | 可比较、可回退 |
