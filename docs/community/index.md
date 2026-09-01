@@ -27,7 +27,9 @@ description: 面向暖通空调与能源系统工程学习者的开放式留言�
 - 公式推导、计算示例、图片表达和页面勘误；
 - 工程现象、故障判断和学习方法。
 
-<WalineComment />
+<SupabaseDiscussion />
+
+文章页中的上下文评论仍可使用 Waline；本页的开放式问答采用 Supabase 匿名用户和 Realtime，二者互不覆盖。
 
 ## 如何参与答疑
 
